@@ -1,0 +1,21 @@
+@startuml Sequence
+participant User
+
+User -> LB: DoWork
+activate LB
+
+LB -> EC2: << createRequest >>
+activate EC2
+
+EC2 -> MySQL: DoWork
+activate MySQL
+MySQL --> EC2: WorkDone
+destroy MySQL
+
+EC2 --> LB: RequestCreated
+deactivate EC2
+
+LB -> User: Done
+deactivate LB
+
+@enduml

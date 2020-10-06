@@ -1,4 +1,4 @@
-@startuml Hello World
+@startuml AWS-Simple
 
 !define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v7.0/dist
 !includeurl AWSPuml/AWSCommon.puml
